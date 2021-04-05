@@ -1,0 +1,173 @@
+.banner {
+  min-height: 500px;
+  width: 100vw;
+  background-color: var(--secondary-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  height: 70%;
+  width: 85%;
+  margin: 70px auto auto auto;
+  padding-bottom: 20px;
+  animation: container-animation 500ms forwards ease-in;
+}
+
+.detail {
+  max-width: 900px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info {
+  margin: 10px 0;
+  font-size: 14px;
+}
+.info .genre_list {
+  margin: 0 20px;
+}
+.other_info {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.other_info .watch_now {
+  width: 150px;
+  height: 40px;
+  opacity: 0.8;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--primary-color);
+  transition: all 250ms ease-out;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  transition: all 350ms ease-out;
+}
+.watch_now:hover {
+  opacity: 1;
+}
+.watch_now:active {
+  transform: scale(0.98);
+}
+
+.play_icon {
+  height: 100px;
+}
+
+.tagline {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.overview {
+  margin: 10px 0;
+}
+.overview h3 {
+  margin-bottom: 5px;
+}
+.overview p {
+  font-weight: 500;
+}
+.crew_detail {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.poster {
+  display: none;
+}
+.poster img {
+  height: 500px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #000;
+}
+
+.trailer {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.trailer.hide {
+  display: none;
+}
+
+.trailer .trailer_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.trailer .header {
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  background: #000;
+  padding: 10px;
+}
+.trailer .header span {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.trailer iframe {
+  height: 550px;
+  width: 80vw;
+}
+
+@media screen and (min-width: 820px) {
+  .detail {
+    margin-left: 30px;
+  }
+  .container {
+    height: 90%;
+    width: 90%;
+  }
+  .poster {
+    display: block;
+    animation: poster-animation 500ms forwards ease-in;
+  }
+}
+
+@keyframes poster-animation {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes container-animation {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

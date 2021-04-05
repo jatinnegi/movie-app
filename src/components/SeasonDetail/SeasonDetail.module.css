@@ -1,0 +1,164 @@
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.link:hover {
+  opacity: 0.5;
+}
+
+.season_detail {
+  position: relative;
+  min-height: 500px;
+  padding: 65px 0;
+}
+
+.action .link {
+  display: flex;
+  align-items: center;
+}
+.action .link span {
+  margin-left: 5px;
+}
+
+.season_header {
+  color: #fff;
+  background: linear-gradient(
+    160deg,
+    rgba(22, 15, 8, 0.95),
+    rgba(22, 15, 8, 0.75)
+  );
+  padding: 10px 0;
+  min-height: 70px;
+}
+.season_header .container {
+  display: flex;
+  align-items: center;
+}
+.season_header img {
+  margin-right: 10px;
+}
+
+.spinner_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.episode_list .container {
+  margin-top: 30px;
+}
+
+.episode_item {
+  margin: 30px 0;
+}
+
+.episode_detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.episode_detail img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.episode_detail div div {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.episode_number {
+  margin-right: 10px;
+}
+.vote_average {
+  background: #000;
+  color: #fff;
+  padding: 3px 15px;
+  border-radius: 35px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.air_date {
+  font-size: 12px;
+  margin-left: 10px;
+  color: #131313;
+}
+
+.overview {
+  font-size: 14px;
+}
+
+.episode_credits {
+  margin-top: 20px;
+}
+
+.episode_credits .crew h5 {
+  display: inline;
+}
+
+.guest_stars_container {
+  margin: 10px 0;
+}
+
+.actor {
+  display: inline-flex;
+  font-size: 14px;
+  margin: 10px;
+  width: 250px;
+}
+.actor .actor_detail {
+  margin-left: 5px;
+}
+.profile_photo {
+  height: 70px;
+  width: 70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.episode_item {
+  box-shadow: 0px 0px 13px #888;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .episode_detail {
+    flex-direction: row;
+  }
+  .episode_detail img {
+    width: 50%;
+  }
+  .episode_detail .container {
+    margin-left: 10px;
+  }
+  .episode_detail h5 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .overview {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .episode_detail h5 {
+    font-size: 0.5rem;
+  }
+  .vote_average {
+    padding: 2px 7px;
+    font-size: 12px;
+  }
+  .actor {
+    width: 100%;
+  }
+}

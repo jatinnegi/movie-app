@@ -1,0 +1,76 @@
+.container {
+  margin-bottom: 50px;
+}
+
+.grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.season {
+  display: inline-flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 15px #888;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+}
+
+.season img {
+  width: 100%;
+}
+.season .detail {
+  padding: 10px;
+}
+.overview {
+  display: none;
+  margin: 15px 0;
+  line-height: 1.4;
+}
+.air_date {
+  font-style: italic;
+  margin: 5px 0;
+  font-weight: bold;
+  display: none;
+}
+.link:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 450px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  .season {
+    flex-direction: row;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .season img {
+    width: 135px;
+  }
+  .detail {
+    margin-left: 10px;
+  }
+  .detail h4 {
+    font-size: 1.4rem;
+  }
+  .detail h5 {
+    font-size: 0.9rem;
+  }
+  .overview {
+    display: block;
+  }
+  .air_date {
+    display: block;
+  }
+}

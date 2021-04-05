@@ -1,0 +1,42 @@
+.toggler {
+  position: relative;
+  height: 35px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 25px;
+  display: flex;
+}
+
+.toggler span {
+  display: inline-block;
+  height: 100%;
+  width: 80px;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.toggler .active {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  height: calc(100% + 4px);
+  width: 50%;
+  background: var(--secondary-color);
+  z-index: -100;
+  transition: all 100ms linear;
+}
+
+.toggler .active.movie {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.toggler .active.tv {
+  left: calc(50% + 2px);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
